@@ -23,7 +23,7 @@ var Stack = function() {
     if (size <= 0) {
       return 0;
     } else {
-    return size;
+      return size;
     }
   };
 

@@ -11,7 +11,6 @@ var Queue = function() {
   someInstance.enqueue = function(value) {
     storage[end] = value;
     end++;
-    console.log(start);
     return end - start;
   };
 
