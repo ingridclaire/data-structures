@@ -6,7 +6,7 @@
 // queue2.enqueue('a');
 
 
-var Queue = function() {
+var Queue = function () {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
   var someInstance = {};
@@ -19,7 +19,7 @@ var Queue = function() {
   return someInstance;
 };
 
-var addMethods = function(obj, objMethods) {
+var addMethods = function (obj, objMethods) {
   for (var method in objMethods) {
     obj[method] = objMethods[method];
   }
@@ -27,19 +27,19 @@ var addMethods = function(obj, objMethods) {
 
 var queueMethods = {
 
-  enqueue : function(value) {
+  enqueue: function (value) {
     this.storage[this.end] = value;
     this.end++;
     return this.end - this.start;
   },
 
-  dequeue : function() {
+  dequeue: function () {
     var currentVal = this.storage[this.start];
     this.start++;
     return currentVal;
   },
 
-  size : function() {
+  size: function () {
     if ((this.end - this.start) <= 0) {
       return 0;
     } else {

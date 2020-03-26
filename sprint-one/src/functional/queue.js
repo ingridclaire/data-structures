@@ -1,4 +1,4 @@
-var Queue = function() {
+var Queue = function () {
   var someInstance = {};
   var start = 0;
   var end = 0;
@@ -8,20 +8,20 @@ var Queue = function() {
 
   // Implement the methods below
 
-  someInstance.enqueue = function(value) {
+  someInstance.enqueue = function (value) {
     storage[end] = value;
     end++;
     return end - start;
   };
 
-  someInstance.dequeue = function() {
+  someInstance.dequeue = function () {
     var currentVal = storage[start];
     delete storage[start];
     start++;
     return currentVal;
   };
 
-  someInstance.size = function() {
+  someInstance.size = function () {
     if ((end - start) <= 0) {
       return 0;
     } else {
